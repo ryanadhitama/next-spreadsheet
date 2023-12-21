@@ -1,5 +1,3 @@
-// src/libs/gsheets.js
-
 import { GoogleSpreadsheet } from "google-spreadsheet";
 import jwt from "./google";
 

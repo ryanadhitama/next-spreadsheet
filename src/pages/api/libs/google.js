@@ -1,4 +1,5 @@
 import * as google from 'google-auth-library'
+import creds from '../../../../google-services.json';
 
 const SCOPES = [
     'https://www.googleapis.com/auth/spreadsheets',
@@ -6,8 +7,8 @@ const SCOPES = [
 ];
 
 const jwt = new google.JWT({
-    email: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_EMAIL,
-    key: process.env.NEXT_PUBLIC_GOOGLE_PRIVATE_KEY,
+    email: creds.client_email,
+    key: creds.private_key,
     scopes: SCOPES,
 });
 
